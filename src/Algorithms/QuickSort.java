@@ -2,7 +2,7 @@ package Algorithms;
 
 public class QuickSort {
 
-    public void printArr(int [] arr) {
+    public void printArray(int [] arr) {
 
         for (int i : arr) {
             System.out.print(i+" ");
@@ -33,6 +33,28 @@ public class QuickSort {
         arr[high] = temp;
 
         return i+1;
+    }
+
+
+   /* This is  main function that implements QuickSort()
+   arr[] --> Array to be sorted,
+   low  --> Starting index,
+   high  --> Ending index */
+    public void quickSort(int arr[], int low, int high) {
+
+        if (low < high) {
+            /* pi is partitioning index, arr[pi] is
+            now at right place */
+            int partition = partition(arr, low, high);
+
+            // Recursively sort elements before
+            // partition and after partition
+
+            quickSort(arr,low, partition -1);
+            quickSort(arr,partition+1,high);
+
+        }
+
     }
 
 
