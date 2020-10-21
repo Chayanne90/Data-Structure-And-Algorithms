@@ -1,5 +1,4 @@
 package DataStructure;
-
 import java.util.Stack;
 
 public class StackArray {
@@ -34,7 +33,6 @@ public class StackArray {
             System.out.println( "The Stack is Empty");
             return -1;
         } else {
-
             int oldTop = top;
             top--;
             return stackContainer[oldTop];
@@ -42,27 +40,11 @@ public class StackArray {
     }
 
     /* Peak (the top of the array) */
-    public long peak() {
-
-        return stackContainer[top];
-    }
+    public long peak() { return stackContainer[top]; }
 
     /* Check if the stack is empty */
-    public boolean isEmpty() {
-
-        return (top == -1);
-    }
+    public boolean isEmpty() { return (top == -1); }
 
     /* Check is the stack is full */
-    public boolean isFull() {
-
-        return (maxSize-1 == top);
-    }
-
-
-
-
-
-
-
+    public boolean isFull() { return (maxSize-1 == top); }
 }
