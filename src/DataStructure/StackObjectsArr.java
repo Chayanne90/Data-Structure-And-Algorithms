@@ -2,7 +2,6 @@ package DataStructure;
 
 public class StackObjectsArr {
 
-
     private int maxSize;
     private Object [] stackContainer;
     private int top;
@@ -22,7 +21,7 @@ public class StackObjectsArr {
             top++;
             stackContainer[top] = item;
         } else {
-            System.out.println( "item: "+ item+" cannot be added, Stack is Full");
+            System.out.println( "item: "+ item +" cannot be added, Stack is Full");
         }
     }
 
@@ -41,23 +40,11 @@ public class StackObjectsArr {
     }
 
     /* Peak (the top of the array) */
-    public Object peak() {
-
-        return stackContainer[top];
-    }
+    public Object peak() { return stackContainer[top]; }
 
     /* Check if the stack is empty */
-    public boolean isEmpty() {
-
-        return (top == -1);
-    }
+    public boolean isEmpty() {  return (top == -1); }
 
     /* Check is the stack is full */
-    public boolean isFull() {
-
-        return (maxSize-1 == top);
-    }
-
-
-
+    public boolean isFull() {  return (maxSize-1 == top); }
 }
