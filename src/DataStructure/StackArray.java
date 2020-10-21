@@ -14,7 +14,8 @@ public class StackArray {
     }
 
     /* Push */
-    public void push(long item){
+    public void push(long item) {
+
         top++;
         stackContainer[top] = item;
     }
@@ -26,6 +27,27 @@ public class StackArray {
         top--;
         return stackContainer[oldTop];
     }
+
+    /* Peak (the top of the array) */
+    public long peak() {
+
+        return stackContainer[top];
+    }
+
+    /* Check if the stack is empty */
+    public boolean isEmpty() {
+
+        return (top == -1);
+    }
+
+    /* Check is the stack is full */
+
+    public boolean isFull() {
+        
+        return (maxSize-1 == top);
+    }
+
+
 
 
 
