@@ -1,7 +1,5 @@
+import DataStructure.QueueArray;
 import DataStructure.StackArray;
-import DataStructure.StackObjectsArr;
-
-import java.util.ArrayList;
 
 public class Main {
 
@@ -22,7 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        /*
         StackObjectsArr theStack = new StackObjectsArr(3);
         theStack.push( 20);
         theStack.push( 12);
@@ -33,7 +31,20 @@ public class Main {
 
             System.out.println(theStack.pop());
         }
+        System.out.println(reversString("chayanne"));
+         */
 
-       // System.out.println(reversString("chayanne"));
+
+        QueueArray theQueue = new QueueArray(5);
+
+        theQueue.enQueue(2);
+        theQueue.enQueue(10);
+        theQueue.enQueue(15);
+        theQueue.enQueue(22);
+        theQueue.enQueue(5);
+        theQueue.enQueue(1);
+
+
+        theQueue.displayQueue();
     }
 }
