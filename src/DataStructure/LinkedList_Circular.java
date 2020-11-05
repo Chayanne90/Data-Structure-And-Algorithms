@@ -31,8 +31,8 @@ public class LinkedList_Circular {
         if (isEmpty()) {
             first.next = newNode;
         }
-        last.next = newNode;
-        last = newNode;
+        last.next = newNode; /* The last value of the last node will point to the new node*/
+        last = newNode;      /* we make the new node we created to be the last node */
     }
 
     public Object deleteFirst() {
@@ -43,6 +43,15 @@ public class LinkedList_Circular {
         }
         first = first.next;
         return temp;
+    }
+
+    public void displayList() {
+
+        Node current = first;
+        while (current != null) {
+            current.displayNode();
+            current = current.next;
+        }
     }
 
 }
