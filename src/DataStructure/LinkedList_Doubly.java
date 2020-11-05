@@ -48,7 +48,6 @@ public class LinkedList_Doubly {
 
             last = null;
         } else {
-
             first.next.previous = first;
         }
         first = first.next;
@@ -56,7 +55,42 @@ public class LinkedList_Doubly {
     }
 
    public Node deleteLast() {
-        
+
+        Node temp = last;
+        if (first.next == null) {
+            first = null;
+        } else {
+            last.previous.next = null;
+        }
+
+        last = last.previous;
+        return temp;
+   }
+
+   public boolean insertAfter(Object key, Object data) {
+
+        Node current = first;
+        while (current.data != key) {
+            current = current.next;
+            if (current.next == null) {
+                return false;
+            }
+        }
+
+        Node newNode = new Node();
+        newNode.data = data;
+        if (current == last) {
+
+            current.next = null;
+            last = newNode;
+        } else {
+            newNode.next = current.next;
+            current.next.previous = newNode;
+        }
+        newNode.previous = current;
+        current.next = newNode;
+
+        return true;
    }
 
 
